@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 2vh;
+  background-color: #000;
+}
+.stage {
+  height: 80vh;
+  width: 98vw;
+  position: relative;
+  margin-top: 1em;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+button {
+  font-size: 1em;
+  padding: 1em;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 1s;
+}
+button:hover {
+  box-shadow: inset 1px 1px 40px 0px #FF5722;
+}
+button.active {
+  background-color: #fff;
+  color: #000;
+}
+.subtract:disabled {
+  opacity: 0.2;
+}
+.mover {
+  height: 4vw;
+  position: absolute;
+  border-radius: 1000em;
+  z-index: 0;
+}
+.optimize {
+  display: inline-block;
+}
+body > .mover {
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .controls button {
+    min-width: 20vw;
+  }
+}
